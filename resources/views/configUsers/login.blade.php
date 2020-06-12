@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>login</title>
-</head>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+            <!-- Required meta tags -->
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <meta name="description" content="">    
+         <meta name="author" content="Sebastian Manco Valencia">
+         
+            <!-- CSS only -->
+        <link rel="stylesheet" href="/css/app.css">  
+            <!-- JS, Popper.js, and jQuery -->
+        <script src="/js/app.js"> </script>
+        <title>Login</title>
+    </head>
 <body>
-    formulario de incio de sección
+    <form action="POST">
+        <div class="form-group">
+
+            <!--- email-->
+
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" placeholder="Enter email" id="email">
+        </div>
+
+        <!---contraseña-->
+
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+
+            <!--recordar contraseña-->
+
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Get in</button>
+      </form>
 </body>
 </html>

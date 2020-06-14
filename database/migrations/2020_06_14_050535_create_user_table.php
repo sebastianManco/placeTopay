@@ -21,10 +21,11 @@ class CreateUserTable extends Migration
             $table->string('email', 100);
             $table->string('phone', 20);
             $table->string('Direction',100);
-            $table->string('type_document', 4);
+            //$table->string('type_document', 4);
             $table->string('user_name', 50);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password', 100);
+            $table->string('confirm_password', 100);
             $table->rememberToken();
             $table->timestamps();
         });

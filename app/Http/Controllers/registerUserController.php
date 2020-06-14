@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\registerUserRequest;
 use Illuminate\Http\Request;
+use App\user;
 
 class registerUserController extends Controller
 {
@@ -33,11 +34,23 @@ class registerUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(/*Request $request*/)
     {
+       
 
-       return 'usuario creado';
-    
+       return User::create([
+        'name' => request('name'),
+        'last_Name' => request('lastName'),
+        'email' => request('email'),
+        'phone' => request('phone'),
+        'direction' => request('direction'),
+        'identification' => request('identification'),
+        'user_Name' => request('userName'),
+        'password' =>request('password'),
+        'confirm_Password' => request('confirmPassword')
+
+        ]);
+
     }
 
     /**

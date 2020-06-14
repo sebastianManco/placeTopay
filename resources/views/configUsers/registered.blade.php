@@ -1,107 +1,112 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-            <!-- Required meta tags -->
-         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-         <meta name="description" content="">    
-         <meta name="author" content="Sebastian Manco Valencia">
-         
-            <!-- CSS only -->
+                <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">    
+        <meta name="author" content="Sebastian Manco Valencia">
+            
+                <!-- CSS only -->
         <link rel="stylesheet" href="/css/app.css">  
-            <!-- JS, Popper.js, and jQuery -->
+                <!-- JS, Popper.js, and jQuery -->
         <script src="/js/app.js"> </script>
         <title>User Register</title>
     </head>
-<body>
-    <div class="container">
-            
-        <h1>User Register</h1>
-        <div class="row">
-<form method="POST" action="{{url('home/registered')}}">
-    @csrf                    <div class="form-group">
-        <!---nombre--->
+    <body>
+        <div class="container">  
+                     
+            <h1>User Register</h1>
+             <div class="row">
+                 <div class="col-sm-6">
+                <form method="POST" action="{{url('home/registered')}}">
 
-        <label for="name"> Full Name </label>
-    <input type="text" class="form-control" id="name" placeholder="" value="{{old('name')}}">
-    </div>
-    <!---Apellido--->
+                       @csrf   
+                        
+                          <!---nombre--->
+                      <div class="form-group">
+                            <label for="name"> Full Name </label>
+                            <input type="text" class="form-control" name="name" placeholder="" value="{{old('name')}}">
+                     </div>
 
-    <div class="form-group">
-        <label for="lastName"> Last Name</label>
-    <input type="text" class="form-control" id="lastName" placeholder="" value="{{old('lastName')}}">
-    </div>
+                            <!---Apellido--->
 
-    <!---email-->
+                      <div class="form-group">
+                            <label for="lastName"> Last Name</label>
+                            <input type="text" class="form-control" name="lastName" placeholder="" value="{{old('lastName')}}">
+                      </div>
 
-    <div class="form-group">
-        <label for="email"> Email</label>
-    <input type="text" class="form-control" id="email" placeholder="" value="{{old('email')}}">
-    </div>
+                            <!---email-->
 
-    <!---telefono-->
+                     <div class="form-group">
+                            <label for="email"> Email</label>
+                            <input type="text" class="form-control" name="email" placeholder="" value="{{old('email')}}">
+                     </div>
 
-    <div class="form-group">
-        <label for="phone">phone number</label>
-    <input type="text" class="form-control" id="phone" placeholder="" value="{{old('phone')}}">
-    </div>
-    <!---direccion-->
+                            <!---telefono-->
 
-    <div class="form-group">
-        <label for="direction"> Direction</label>
-    <input type="text" class="form-control" id="direction" placeholder="" value="{{old('direction')}}">
-    </div>
-    
-    <!--tipo de identificacion-->
+                       <div class="form-group">
+                            <label for="phone">phone number</label>
+                            <input type="text" class="form-control" name="phone" placeholder="" value="{{old('phone')}}">
+                     </div>
+                            <!---direccion-->
 
-    <label for="cedula"> Type of identification document</label>
-    <div class="form-check-inline">
-        <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">C.C
-        </label>
-    </div>
-    <div class="form-check-inline">
-        <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">T.E
-        </label>
-    </div>
-    <div class="form-check-inline">
-        <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="" >T.I
-        </label>
-    </div>
+                     <div class="form-group">
+                            <label for="direction"> Direction</label>
+                            <input type="text" class="form-control" name="direction" placeholder="" value="{{old('direction')}}">
+                      </div>
+                        
+                            <!--tipo de identificacion-->
 
-        <!---tipo de documento--->
-        <div class="form-group">
-            <label for="Document"> Nº Identification</label>
-        <input type="text" class="form-control" id="Identification" placeholder="" value="{{old('Identification')}}">
-        </div> 
-        <!---usuario--->
-    <div class="form-group">
-        <label for="userName"> User Name</label>
-    <input type="text" class="form-control" id="userName" placeholder="" value="{{old('userName')}}">
-    </div>         
-    <!---contraseña--->
+                      <label for="cedula"> Type of identification document</label>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">C.C
+                                </label>
+                         </div>
+                         <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">T.E
+                                </label>
+                          </div>
+                          <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="" >T.I
+                                </label>
+                            </div>
 
-    <div class="form-group">
-        <label for="password"> Password</label>
-    <input type="password" class="form-control" id="password" placeholder="" value="{{old('password')}}">
-    </div>
-                        <!---confirma contraseña--->
+                            <!---tipo de documento--->
+                        <div class="form-group">
+                            <label for="Document"> Nº Identification</label>
+                                <input type="text" class="form-control" name="Identification" placeholder="" value="{{old('Identification')}}">
+                        </div> 
+                            <!---usuario--->
+                        <div class="form-group">
+                            <label for="userName"> User Name</label>
+                            <input type="text" class="form-control" name="userName" placeholder="" value="{{old('userName')}}">
+                        </div>         
+                            <!---contraseña--->
 
-    <div class="form-group">
-        <label for="confirmPassword"> Confirm Password</label>
-    <input type="password" class="form-control" id="confirmPassword" placeholder="" value="{{old('confirmPassword')}}">
-    </div>
-    <button type="submit" class="btn btn-primary"> save</button>
-    <button type="button" class="btn btn-secondary">Cancel</button>
-    </form>
-   
-</form>
+                        <div class="form-group">
+                            <label for="password"> Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="" value="{{old('password')}}">
+                        </div>
+                            <!---confirma contraseña--->
 
-</div>
+                        <div class="form-group">
+                            <label for="confirmPassword"> Confirm Password</label>
+                            <input type="password" class="form-control" name="confirmPassword" placeholder="" value="{{old('confirmPassword')}}">
+                        </div>
 
-</div>
+                        <button type="submit" class="btn btn-primary"> save</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    
+                
+                    </form>
+                </div>   
+            </div>
 
-</body>
+        </div>
+
+    </body>
 </html>

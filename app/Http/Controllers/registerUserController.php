@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\registerUserRequest;
 use Illuminate\Http\Request;
 
-class registerController extends Controller
+class registerUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class registerController extends Controller
      */
     public function index()
     {
-        return view('configUsers.registerUser');
+      
     }
 
     /**
@@ -23,7 +23,8 @@ class registerController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('configUsers.registered');
     }
 
     /**
@@ -32,9 +33,11 @@ class registerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+
+       return 'usuario creado';
+    
     }
 
     /**

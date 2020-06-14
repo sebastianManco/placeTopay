@@ -23,7 +23,7 @@ class loginController extends Controller
      */
     public function create()
     {
-        //
+        //s
     }
 
     /**

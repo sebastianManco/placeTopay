@@ -29,7 +29,8 @@
                         <a class="nav-link active" href="/home/login">login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/home/register">register</a>
+                            <a class="nav-link active" href="/home/register">Register</a>
+                       
                     </li>
                     </ul>   
                 </nav>   
